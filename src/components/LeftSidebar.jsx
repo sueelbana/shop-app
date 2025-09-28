@@ -26,7 +26,7 @@ const categories = [
 
 const LeftSidebar = () => {
   return (
-    <aside className="w-64 bg-white border rounded-lg shadow-sm">
+    <aside className="w-80 bg-white border rounded-lg shadow-sm">
       <ul className="divide-y">
         {categories.map((cat, index) => (
           <li key={index} className="flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-gray-50">

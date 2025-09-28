@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "brand-purple": "rgba(99,76,159,1)",  // your custom navbar color
+        "brand-purple": "rgba(99,76,159,1)", 
+        "brand": "rgba(57, 36, 95, 1)", 
+
       },
     },
   },

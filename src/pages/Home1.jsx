@@ -4,7 +4,7 @@ import PromoBanner from "../components/PromoBanner";
 
 const HomePage = () => {
   return (
-    <div className="flex">
+    <div className="flex gap-6">
       <LeftSidebar />
       <PromoBanner />
     </div>
