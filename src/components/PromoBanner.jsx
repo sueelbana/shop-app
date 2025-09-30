@@ -29,8 +29,6 @@ const PromoBanner = () => {
 
         {/* CTA Button + Price */}
         <div className="mt-6">
-          {" "}
-          {/* 👈 added margin-top */}
           <div className="flex items-center space-x-4">
             <button className="bg-brand-purple text-white px-4 py-2 rounded-md hover:bg-purple-800">
               Shop Now
@@ -45,6 +43,16 @@ const PromoBanner = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom Dots */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+        <div className="flex space-x-3 bg-white rounded-full px-4 py-2">
+          {/* Active dot */}
+          <span className="w-3 h-3 bg-purple-700 rounded-full"></span>
+          {/* Inactive dot */}
+          <span className="w-3 h-3 bg-gray-300 rounded-full"></span>
         </div>
       </div>
     </div>
