@@ -5,6 +5,8 @@ import FeatureHighlights from "../components/FeatureHighlights";
 import WeeklyDeals from "../components/WeeklyDeals";
 import NewArrivals from "../components/NewArrivals";
 import FeaturedProducts from "../components/FeaturedProducts";
+import BestSellers from "../components/BestSellers";
+import PopularCompanies from "../components/PopularCompanies";
 
 const HomePage = () => {
   return (
@@ -20,6 +22,8 @@ const HomePage = () => {
       <WeeklyDeals />
       <NewArrivals />
       <FeaturedProducts />
+      <BestSellers />
+      <PopularCompanies />
     </div>
   );
 };
