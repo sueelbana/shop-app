@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home1 from "./pages/Home1";
-import Home2 from "./pages/Home2";
 import Home3 from "./pages/Home3";
 import ProductFilter from "./pages/ProductFilter";
 import ProductDetails from "./pages/ProductDetails";
@@ -17,6 +16,10 @@ import Register from "./pages/Register";
 import Vendor from "./pages/Vendor";
 import NotFound from "./pages/NotFound";
 
+// ✅ Import category pages
+import FruitsAndVegetables from "./pages/FruitsAndVegetables";
+// You can later create similar pages for other categories (Meats, Dairy, etc.)
+
 function App() {
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
@@ -25,18 +28,35 @@ function App() {
 
         <main className="flex-grow p-6">
           <Routes>
+            {/* Home routes */}
             <Route path="/" element={<Home1 />} />
-            <Route path="/home-2" element={<Home2 />} />
             <Route path="/home-3" element={<Home3 />} />
+
+            {/* Product routes */}
             <Route path="/filter" element={<ProductFilter />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+
+            {/* Blog & Contact */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+
+            {/* Auth */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+
+            {/* Vendor */}
             <Route path="/vendor" element={<Vendor />} />
+
+            {/* ✅ Categories */}
+            <Route path="/fruits-vegetables" element={<FruitsAndVegetables />} />
+            {/* Example placeholders for future categories */}
+            {/* <Route path="/meats-seafood" element={<MeatsAndSeafood />} /> */}
+            {/* <Route path="/breakfast-dairy" element={<BreakfastAndDairy />} /> */}
+            {/* ... more categories */}
+
+            {/* Fallback */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

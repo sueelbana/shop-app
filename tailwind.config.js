@@ -9,6 +9,7 @@ export default {
       colors: {
         "brand-purple": "rgba(99,76,159,1)", 
         "brand": "rgba(57, 36, 95, 1)", 
+        "light": "rgba(236, 235, 238, 1)",
 
       },
     },
