@@ -5,7 +5,7 @@ import {
   Star,
 } from "lucide-react";
 
-import banner1 from "../assets/juice.jpg";
+import banner1 from "../assets/orange.jpg";
 import banner2 from "../assets/popcorn.jpg";
 import banner3 from "../assets/peach.jpg";
 
@@ -16,6 +16,8 @@ import prod4 from "../assets/prod4.jpg";
 import prod5 from "../assets/prod5.jpg";
 import prod6 from "../assets/prod4.jpg";
 import prod7 from "../assets/prod3.jpg";
+import { ArrowRight} from "lucide-react";
+
 
 
 const bestSellers = [
@@ -96,18 +98,18 @@ const TopDeals = () => {
     <div className="my-12">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold text-black">
-          BEST SELLERS
-        </h2>
-        <button className="text-sm text-gray-600 hover:underline">
-          View All →
+        <div className="flex items-center gap-3">
+          <h2 className="text-xl font-semibold">Best Sellers</h2>
+          <p className="text-gray-500 text-sm">
+            Dont miss this opportunity at a special discount just for this week.{" "}
+          </p>
+        </div>
+
+        <button className="flex items-center gap-2 border border-gray-400 rounded-full px-4 py-2 text-black hover:bg-gray-100 transition">
+          View All
+          <ArrowRight className="w-4 h-4" />
         </button>
       </div>
-
-      {/* Subtitle */}
-      <p className="text-gray-400 text-sm mb-6">
-        Don’t miss this opportunity at a special discount just for this week.
-      </p>
 
       {/* Product Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
