@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home1 from "./pages/Home1";
-import Home3 from "./pages/Home3";
+import Home3 from "./pages/Shop";
 import ProductFilter from "./pages/ProductFilter";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 
 // ✅ Import category pages
 import FruitsAndVegetables from "./pages/FruitsAndVegetables";
+import Shop from "./pages/Shop";
 // You can later create similar pages for other categories (Meats, Dairy, etc.)
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Routes>
             {/* Home routes */}
             <Route path="/" element={<Home1 />} />
-            <Route path="/home-3" element={<Home3 />} />
+            <Route path="/shop" element={<Shop />} />
 
             {/* Product routes */}
             <Route path="/filter" element={<ProductFilter />} />

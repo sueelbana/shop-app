@@ -13,6 +13,8 @@ import groceryImg from "../assets/grocery.jpg";
 import EditorsPick from "../components/EditorsPick";
 import CategoryProducts from "../components/CategoryProducts";
 import TopDeals from "../components/TopDeals";
+import Deals from "../components/Deals";
+import NewsSection from "../components/NewsSection";
 
 const categories = [
   { name: "Fruits & Vegetables", img: fruitsImg },
@@ -92,11 +94,13 @@ const FruitsAndVegetables = () => {
           </div>
         </div>
       </div>
-      {/* Editor's Pick Section */}
 
+      {/* Editor's Pick Section */}
       <EditorsPick />
       <CategoryProducts />
       <TopDeals />
+      <Deals />
+      <NewsSection />
     </section>
   );
 };
