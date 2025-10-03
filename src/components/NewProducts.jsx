@@ -69,13 +69,13 @@ export default function NewProducts() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
-          <div>
-            <h2 className="text-xl font-semibold">NEW PRODUCTS</h2>
-            <p className="text-gray-500 text-sm">
-              Some of the new products arriving this week
-            </p>
-          </div>
-          <button className="text-sm font-medium border border-gray-400 rounded-full px-4 py-2 hover:bg-gray-100 transition">
+          <h2 className="text-xl font-bold">
+            NEW PRODUCTS{" "}
+            <span className="text-gray-500 font-normal text-sm">
+              Some of the new products arriving this weeks{" "}
+            </span>
+          </h2>
+          <button className="flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm font-medium hover:bg-gray-100 transition">
             View All →
           </button>
         </div>
@@ -87,11 +87,6 @@ export default function NewProducts() {
               key={product.id}
               className="relative border rounded-lg p-4 bg-white hover:shadow-lg transition flex flex-col"
             >
-              {/* Discount Badge */}
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
-                -{product.discount}%
-              </div>
-
               {/* Product Image */}
               <div className="relative">
                 <img
@@ -99,6 +94,10 @@ export default function NewProducts() {
                   alt={product.name}
                   className="h-32 mx-auto object-contain"
                 />
+                {/* Discount Badge */}
+                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  -{product.discount}%
+                </div>
                 {/* Add Button (below image, right side) */}
                 <div className="flex justify-end mt-2">
                   <button className="bg-purple-600 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-purple-700 transition">
@@ -149,7 +148,9 @@ export default function NewProducts() {
                   </div>
                   <p className="text-xs mt-1">
                     available only:{" "}
-                    <span className="font-bold text-black">{product.stock}</span>
+                    <span className="font-bold text-black">
+                      {product.stock}
+                    </span>
                   </p>
                 </div>
               )}

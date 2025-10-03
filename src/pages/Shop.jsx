@@ -1,5 +1,5 @@
 import React from "react";
-import shopBanner from "../assets/shop-banner.jpg"; // background/banner
+import shopBanner from "../assets/shop-banner.jpg"; 
 import TopCategories from "../components/TopCategories";
 import NewProducts from "../components/NewProducts";
 import NewDeals from "../components/NewDeals";
