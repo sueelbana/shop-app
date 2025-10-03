@@ -3,6 +3,12 @@ import shopBanner from "../assets/shop-banner.jpg";
 import TopCategories from "../components/TopCategories";
 import NewProducts from "../components/NewProducts";
 import NewDeals from "../components/NewDeals";
+import New from "../components/New";
+import Products from "../components/Products";
+import SmartStore from "../components/SmartStore";
+import Deals from "../components/Deals";
+import DealsOfTheDay from "../components/DealsOfTheDay";
+import FeatureHighlights from "../components/FeatureHighlights";
 
 export default function Shop() {
   return (
@@ -48,6 +54,12 @@ export default function Shop() {
       <TopCategories />
       <NewProducts />
       <NewDeals />
+      <New />
+      <Products />
+      <SmartStore />
+      <Deals />
+      <DealsOfTheDay />
+      <FeatureHighlights />
     </div>
   );
 }
