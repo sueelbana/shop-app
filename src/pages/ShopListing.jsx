@@ -1,6 +1,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import FilterSidebar from "../components/FilterSidebar";
 import Banner from "../components/Banner";
 
@@ -184,9 +185,10 @@ export default function ShopListing() {
         {/* ✅ Product container */}
         <div className="border rounded-md grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {products.map((p) => (
-            <div
+            <Link
+              to={`/product/${p.id}`}
               key={p.id}
-              className="relative p-4 flex flex-col items-start border-b border-r last:border-r-0"
+              className="relative p-4 flex flex-col items-start border-b border-r last:border-r-0 hover:shadow-md transition"
             >
               {/* 🏷️ Discount Badge */}
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -235,7 +237,7 @@ export default function ShopListing() {
                   In Stock
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </main>
