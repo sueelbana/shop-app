@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // 👈 import navigate hook
 import shopBanner from "../assets/shop-banner.jpg"; 
 import TopCategories from "../components/TopCategories";
 import NewProducts from "../components/NewProducts";
@@ -11,6 +12,8 @@ import DealsOfTheDay from "../components/DealsOfTheDay";
 import FeatureHighlights from "../components/FeatureHighlights";
 
 export default function Shop() {
+  const navigate = useNavigate(); // 👈 setup navigation
+
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Hero Banner Section */}
@@ -40,7 +43,11 @@ export default function Shop() {
             </p>
 
             <div className="mt-6 flex items-center space-x-6">
-              <button className="bg-brand-purple hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded-md">
+              {/* 👇 Navigate to Shop Listing Page */}
+              <button
+                onClick={() => navigate("/shop-listing")}
+                className="bg-brand-purple hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded-md"
+              >
                 Shop Now
               </button>
               <span className="text-red-600 font-bold text-lg">
@@ -51,6 +58,8 @@ export default function Shop() {
           </div>
         </div>
       </div>
+
+      {/* Other Sections */}
       <TopCategories />
       <NewProducts />
       <NewDeals />
