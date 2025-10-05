@@ -80,68 +80,67 @@ const NewCategoryProducts = () => {
           Related products
         </h2>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="relative bg-white border border-gray-200 rounded-md p-4 shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              {/* Discount Badge */}
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-                {product.discount}
-              </div>
+        {/* ✅ Main container with full border */}
+        <div className="border border-gray-200 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y divide-gray-200">
+            {products.map((product) => (
+              <div key={product.id} className="relative bg-white p-4">
+                {/* Discount Badge */}
+                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                  {product.discount}
+                </div>
 
-              {/* Wishlist Icon */}
-              <button className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition">
-                <Heart className="w-5 h-5" />
-              </button>
+                {/* Wishlist Icon */}
+                <button className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition">
+                  <Heart className="w-5 h-5" />
+                </button>
 
-              {/* Product Image */}
-              <div className="flex justify-center items-center mb-4">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-28 object-contain"
-                />
-              </div>
-
-              {/* Product Name */}
-              <h3 className="text-sm font-medium text-gray-800 mb-2 line-clamp-2">
-                {product.name}
-              </h3>
-
-              {/* Rating */}
-              <div className="flex items-center mb-2">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-4 h-4 ${
-                      i < product.rating
-                        ? "text-yellow-400 fill-yellow-400"
-                        : "text-gray-300"
-                    }`}
+                {/* Product Image */}
+                <div className="flex justify-center items-center mb-3">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-28 object-contain"
                   />
-                ))}
-              </div>
+                </div>
 
-              {/* Price */}
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-red-600 font-semibold text-sm">
-                  ${product.price}
-                </span>
-                <span className="text-gray-400 line-through text-xs">
-                  ${product.oldPrice}
-                </span>
-              </div>
+                {/* Product Name */}
+                <h3 className="text-sm font-medium text-gray-800 mb-2 line-clamp-2">
+                  {product.name}
+                </h3>
 
-              {/* Stock + Cart */}
-              <div className="flex items-center gap-1 text-green-600 text-xs font-semibold">
-                <ShoppingCart className="w-4 h-4" />
-                <span>IN STOCK</span>
+                {/* Rating */}
+                <div className="flex items-center mb-2">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${
+                        i < product.rating
+                          ? "text-yellow-400 fill-yellow-400"
+                          : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Price */}
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-red-600 font-semibold text-sm">
+                    ${product.price}
+                  </span>
+                  <span className="text-gray-400 line-through text-xs">
+                    ${product.oldPrice}
+                  </span>
+                </div>
+
+                {/* Stock + Cart */}
+                <div className="flex items-center gap-1 text-green-600 text-xs font-semibold">
+                  <ShoppingCart className="w-4 h-4" />
+                  <span>IN STOCK</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

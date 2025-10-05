@@ -6,6 +6,7 @@ import {
   FaShareAlt,
   FaBalanceScale,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // ✅ Import navigation
 
 // Product images
 import bananaMain from "../assets/bananas.jpg";
@@ -17,9 +18,10 @@ import bananaThumb3 from "../assets/banana2.jpg";
 import Description from "../components/Description";
 import NewCategoryProducts from "../components/NewCategoryProducts";
 
-const BananaProductDetail = () => {
+const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const [timeLeft, setTimeLeft] = useState(3600);
+  const navigate = useNavigate(); // ✅ initialize navigation
 
   // Countdown timer
   useEffect(() => {
@@ -38,9 +40,13 @@ const BananaProductDetail = () => {
 
   const { h, m, s } = formatTime(timeLeft);
 
+  // ✅ Redirect handler for "Buy Now"
+  const handleBuyNow = () => {
+    navigate("/checkout");
+  };
+
   return (
     <>
-      {/* Product Details */}
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* LEFT - Product Image + Thumbnails */}
         <div>
@@ -49,21 +55,14 @@ const BananaProductDetail = () => {
           </div>
 
           <div className="flex justify-end gap-3 mt-4">
-            <img
-              src={bananaThumb1}
-              alt="thumb1"
-              className="w-20 h-20 object-contain border rounded-md cursor-pointer hover:border-green-500"
-            />
-            <img
-              src={bananaThumb2}
-              alt="thumb2"
-              className="w-20 h-20 object-contain border rounded-md cursor-pointer hover:border-green-500"
-            />
-            <img
-              src={bananaThumb3}
-              alt="thumb3"
-              className="w-20 h-20 object-contain border rounded-md cursor-pointer hover:border-green-500"
-            />
+            {[bananaThumb1, bananaThumb2, bananaThumb3].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`thumb${i + 1}`}
+                className="w-20 h-20 object-contain border rounded-md cursor-pointer hover:border-green-500"
+              />
+            ))}
           </div>
         </div>
 
@@ -78,9 +77,7 @@ const BananaProductDetail = () => {
               <Star
                 key={i}
                 size={16}
-                className={
-                  i < 3 ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
-                }
+                className={i < 3 ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}
               />
             ))}
             <span className="text-sm text-gray-500 ml-2">3.00</span>
@@ -90,8 +87,8 @@ const BananaProductDetail = () => {
 
           <p className="text-gray-600 mb-4">
             Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus
-            malesuada tincidunt. Class aptent taciti sociosqu ad litora
-            torquent Vivamus adipiscing nisl ut dolor dignissim semper.
+            malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent
+            Vivamus adipiscing nisl ut dolor dignissim semper.
           </p>
 
           <div className="mb-4">
@@ -133,7 +130,12 @@ const BananaProductDetail = () => {
             <button className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700">
               Add to cart
             </button>
-            <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800">
+
+            {/* ✅ Buy Now redirects to Checkout */}
+            <button
+              onClick={handleBuyNow}
+              className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800"
+            >
               Buy Now
             </button>
           </div>
@@ -146,7 +148,6 @@ const BananaProductDetail = () => {
                 case of payment.
               </p>
             </div>
-
             <div className="p-2">
               <p>
                 <strong>Warranty:</strong> The Consumer Protection Act does not
@@ -168,12 +169,10 @@ const BananaProductDetail = () => {
           </div>
         </div>
 
-        {/* Tabs (Description Section) */}
+        {/* Description + Related Products */}
         <div className="col-span-2 mt-8">
           <Description />
         </div>
-
-        {/* ✅ Related Products Section */}
         <div className="col-span-2 mt-8">
           <NewCategoryProducts />
         </div>
@@ -182,4 +181,4 @@ const BananaProductDetail = () => {
   );
 };
 
-export default BananaProductDetail;
+export default ProductDetails;
