@@ -18,7 +18,7 @@ export default function Footer() {
           />
           <button
             type="submit"
-            className="bg-purple-600 text-white px-5 rounded-r-md"
+            className="bg-brand-purple text-white px-5 rounded-r-md"
           >
             SEND
           </button>
