@@ -97,12 +97,13 @@ export default function Navbar() {
         {/* Icons */}
         <div className="flex items-center space-x-6 text-gray-600">
           <Link
-            to="/account"
+            to="/login"
             className="flex items-center space-x-1 hover:text-purple-700"
           >
             <User size={20} />
             <span>Sign in</span>
           </Link>
+
           <Link to="/wishlist" className="relative hover:text-purple-700">
             <Heart size={20} />
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">

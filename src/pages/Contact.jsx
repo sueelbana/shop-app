@@ -1,5 +1,12 @@
 import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import FeatureHighlights from "../components/FeatureHighlights";
 
 export default function Contact() {
   return (
@@ -75,6 +82,37 @@ export default function Contact() {
               </div>
             </div>
           </div>
+
+          {/* ✅ Follow Us Section */}
+          <div className="flex items-center gap-4 pt-6">
+            <span className="text-gray-800 font-medium">Follow us:</span>
+            <div className="flex items-center gap-3">
+              <a
+                href="#"
+                className="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition"
+              >
+                <FaFacebookF size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-sky-400 text-white p-2 rounded-md hover:bg-sky-500 transition"
+              >
+                <FaTwitter size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-black text-white p-2 rounded-md hover:bg-gray-800 transition"
+              >
+                <FaInstagram size={18} />
+              </a>
+              <a
+                href="#"
+                className="bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800 transition"
+              >
+                <FaLinkedinIn size={18} />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Right Side: Contact Form */}
@@ -122,6 +160,11 @@ export default function Contact() {
             </button>
           </form>
         </div>
+      </div>
+
+      {/* ✅ Added Gap Before FeatureHighlights */}
+      <div className="mt-24">
+        <FeatureHighlights />
       </div>
     </div>
   );
