@@ -1,8 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
-import bannerImg from "../assets/banner.jpg"; // banner
-import userImg from "../assets/user.jpg"; // profile image
+import bannerImg from "../assets/banner.jpg";
+import userImg from "../assets/user.jpg";
 
 const companies = [
   {
@@ -31,7 +31,6 @@ const companies = [
 const PopularCompanies = () => {
   return (
     <div className="mt-8">
-      {/* Banner */}
       <div className="mb-6">
         <img
           src={bannerImg}
@@ -40,7 +39,6 @@ const PopularCompanies = () => {
         />
       </div>
 
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-3">
           <h2 className="text-xl font-semibold">Popular Companies</h2>
@@ -55,14 +53,12 @@ const PopularCompanies = () => {
         </button>
       </div>
 
-      {/* Companies Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {companies.map((company, index) => (
           <div
             key={index}
             className="p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition flex flex-col"
           >
-            {/* Top: Image + Content */}
             <div className="flex items-start gap-4">
               <img
                 src={userImg}
@@ -74,7 +70,6 @@ const PopularCompanies = () => {
                 <h3 className="font-medium">{company.name}</h3>
                 <span className="text-xs text-gray-400 mb-1">Featured</span>
 
-                {/* Rating */}
                 <div className="flex items-center">
                   <FaStar className="text-yellow-500 mr-1" />
                   <span className="font-medium">{company.rating}</span>
@@ -82,7 +77,6 @@ const PopularCompanies = () => {
               </div>
             </div>
 
-            {/* Bottom: Description */}
             <p className="text-sm text-gray-600 mt-3">{company.description}</p>
           </div>
         ))}

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ArrowRight, Heart, Plus } from "lucide-react";
 
-// Product images
 import bananas from "../assets/banana.jpg";
 import lays from "../assets/lays.jpg";
 import pizza from "../assets/pizza.jpg";
@@ -9,7 +8,6 @@ import beef from "../assets/beef.jpg";
 import mouthwash from "../assets/mouthwash.jpg";
 import chicken from "../assets/chicken.jpg";
 
-// Banner images
 import babyfood from "../assets/babyfood.jpg";
 import icecream from "../assets/icecream.jpg";
 
@@ -87,7 +85,6 @@ const banners = [
   },
 ];
 
-// Countdown Timer Component
 function CountdownTimer({ initialTime }) {
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
@@ -112,7 +109,6 @@ function CountdownTimer({ initialTime }) {
 export default function FeaturedProducts() {
   return (
     <section className="px-6 py-10">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-3">
           <h2 className="text-xl font-semibold">Featured Products</h2>
@@ -127,14 +123,12 @@ export default function FeaturedProducts() {
         </button>
       </div>
 
-      {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
         {products.map((product) => (
           <div
             key={product.id}
             className="border rounded-lg p-4 hover:shadow-md transition flex items-start space-x-4 min-h-[220px]"
           >
-            {/* Image + Discount */}
             <div className="relative w-40 h-40 flex-shrink-0">
               <img
                 src={product.img}
@@ -144,11 +138,9 @@ export default function FeaturedProducts() {
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md">
                 {product.discount}
               </span>
-              {/* Timer below image */}
-              <CountdownTimer initialTime={300} /> {/* 5 min timer */}
+              <CountdownTimer initialTime={300} />
             </div>
 
-            {/* Heart Icon */}
             <div className="flex items-start pl-2">
               <Heart
                 size={18}
@@ -156,7 +148,6 @@ export default function FeaturedProducts() {
               />
             </div>
 
-            {/* Content */}
             <div className="flex flex-col justify-between flex-1">
               <h3 className="text-sm font-medium text-gray-700 line-clamp-2">
                 {product.title}
@@ -178,7 +169,6 @@ export default function FeaturedProducts() {
         ))}
       </div>
 
-      {/* Banners */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {banners.map((banner) => (
           <div
@@ -190,7 +180,6 @@ export default function FeaturedProducts() {
               backgroundPosition: "center",
             }}
           >
-            {/* Content */}
             <div className="relative z-10 max-w-[70%]">
               <p className="text-orange-400 text-xs font-semibold">
                 Only This Week

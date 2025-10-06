@@ -59,23 +59,18 @@ const bestSellers = [
   },
 ];
 
-// Small product card
 const ProductCard = ({ product }) => {
   return (
     <div className="relative flex items-start gap-4 p-4">
-      {/* Left Side - Image, Discount, Heart */}
       <div className="relative w-32 flex-shrink-0">
-        {/* Discount Badge */}
         <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
           {product.discount}
         </span>
 
-        {/* Heart Icon */}
         <button className="absolute top-2 right-2 text-gray-400 hover:text-red-500">
           <Heart className="w-4 h-4" />
         </button>
 
-        {/* Product Image */}
         <img
           src={product.image}
           alt={product.title}
@@ -83,14 +78,11 @@ const ProductCard = ({ product }) => {
         />
       </div>
 
-      {/* Right Side - Info */}
       <div className="flex flex-col flex-1">
-        {/* Title */}
         <h4 className="text-sm font-medium mb-1 line-clamp-2">
           {product.title}
         </h4>
 
-        {/* Rating */}
         <div className="flex items-center mb-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
@@ -104,7 +96,6 @@ const ProductCard = ({ product }) => {
           ))}
         </div>
 
-        {/* Price */}
         <div className="flex items-center gap-2 mb-2">
           <span className="text-red-600 font-bold text-sm">
             ${product.price}
@@ -114,7 +105,6 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        {/* Add to Cart */}
         <button className="bg-gray-100 text-xs text-black py-1 rounded-md hover:bg-gray-200 transition flex items-center justify-center gap-1">
           <ShoppingCart className="w-3 h-3" /> Add to cart
         </button>
@@ -123,31 +113,26 @@ const ProductCard = ({ product }) => {
   );
 };
 
-// Big Featured card
 const FeaturedCard = ({ product }) => {
   const total = product.stock + product.sold;
   const soldPercentage = Math.floor((product.sold / total) * 100);
 
   return (
     <div className="relative border border-red-600 rounded-lg shadow-md p-6 flex flex-col">
-      {/* Discount Badge */}
       <span className="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
         {product.discount}
       </span>
 
-      {/* Heart Icon */}
       <button className="absolute top-4 right-4 text-gray-400 hover:text-red-500">
         <Heart className="w-5 h-5" />
       </button>
 
-      {/* Image */}
       <img
         src={product.image}
         alt={product.title}
         className="h-40 object-contain mx-auto mb-3"
       />
 
-      {/* Rating */}
       <div className="flex items-center mb-2">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
@@ -161,10 +146,8 @@ const FeaturedCard = ({ product }) => {
         ))}
       </div>
 
-      {/* Title */}
       <h3 className="text-lg font-bold mb-2">{product.title}</h3>
 
-      {/* Price */}
       <div className="flex items-center gap-2 mb-3">
         <span className="text-red-600 font-bold text-xl">${product.price}</span>
         <span className="text-gray-400 line-through text-sm">
@@ -172,10 +155,8 @@ const FeaturedCard = ({ product }) => {
         </span>
       </div>
 
-      {/* Description */}
       <p className="text-sm text-gray-600 mb-4">{product.description}</p>
 
-      {/* Stock Progress */}
       <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
         <div
           className="bg-red-500 h-2 rounded-full"
@@ -187,7 +168,6 @@ const FeaturedCard = ({ product }) => {
         <span className="font-semibold">{product.stock}</span> In Stock
       </p>
 
-      {/* Add to Cart */}
       <button className="w-full bg-green-600 text-white py-3 rounded-md flex items-center justify-center gap-2 font-medium">
         <ShoppingCart className="w-5 h-5" /> Add to cart
       </button>
@@ -198,7 +178,6 @@ const FeaturedCard = ({ product }) => {
 const TopDeals = () => {
   return (
     <div className="my-12">
-      {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <div className="flex flex-col md:flex-row md:items-center gap-3">
           <h2 className="text-2xl font-bold">Best Sellers</h2>
@@ -214,9 +193,7 @@ const TopDeals = () => {
         </button>
       </div>
 
-      {/* Product Layout with Featured Middle Card */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        {/* Left container */}
         <div className="border rounded-lg bg-transparent p-2 flex flex-col gap-4">
           {[bestSellers[0], bestSellers[1], bestSellers[2]].map(
             (product, idx) => (
@@ -227,10 +204,8 @@ const TopDeals = () => {
           )}
         </div>
 
-        {/* Middle featured product */}
         <FeaturedCard product={bestSellers[3]} />
 
-        {/* Right container */}
         <div className="border rounded-lg bg-transparent p-2 flex flex-col gap-4">
           {[bestSellers[4], bestSellers[2], bestSellers[0]].map(
             (product, idx) => (

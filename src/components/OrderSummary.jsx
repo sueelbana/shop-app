@@ -5,13 +5,11 @@ const OrderSummary = () => {
     <div className="border border-gray-200 bg-purple-50 p-6 rounded-md">
       <h2 className="text-lg font-semibold mb-4">Your order</h2>
 
-      {/* Table Header */}
       <div className="flex justify-between border-b pb-2 mb-2">
         <span className="font-medium">Product</span>
         <span className="font-medium">Subtotal</span>
       </div>
 
-      {/* Example Items */}
       <div className="flex justify-between text-sm mb-2">
         <span>Marketside Fresh Organic Bananas, Bunch × 1</span>
         <span>$0.89</span>
@@ -25,13 +23,11 @@ const OrderSummary = () => {
         <span>Local pickup</span>
       </div>
 
-      {/* Total */}
       <div className="flex justify-between font-semibold text-base mt-4">
         <span>Total</span>
         <span>$15.89</span>
       </div>
 
-      {/* Payment Options */}
       <div className="mt-6 space-y-3 text-sm text-black font-semibold">
         <label className="flex items-center gap-2">
           <input type="radio" name="payment" defaultChecked />
@@ -53,7 +49,6 @@ const OrderSummary = () => {
         </label>
       </div>
 
-      {/* Terms Agreement */}
       <div className="mt-6 flex items-start gap-2">
         <input type="checkbox" />
         <p className="text-sm text-gray-700">
@@ -61,7 +56,6 @@ const OrderSummary = () => {
         </p>
       </div>
 
-      {/* Submit Button */}
       <button className="w-full mt-6 bg-brand-purple text-white py-2 rounded-md hover:bg-purple-700">
         Place order
       </button>

@@ -38,7 +38,6 @@ export default function Products() {
             backgroundPosition: "center",
           }}
         >
-          {/* Content */}
           <div className="relative z-10 max-w-[70%]">
             <p className="text-black bg-orange-100 rounded-md text-xs font-semibold">
               Only This Week

@@ -8,7 +8,7 @@ import product3 from "../assets/product3.jpg";
 import product4 from "../assets/product4.jpg";
 import product5 from "../assets/product5.jpg";
 import bottomBanner from "../assets/banner.jpg";
-import { ArrowRight, Heart, Star, ShoppingCart } from "lucide-react"; // ✅ added icons
+import { ArrowRight, Heart, Star, ShoppingCart } from "lucide-react"; 
 
 const products = [
   {
@@ -66,7 +66,6 @@ const products = [
 const CategoryProducts = () => {
   return (
     <div className="my-12">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-3">
           <h2 className="text-xl font-semibold text-black">
@@ -82,9 +81,7 @@ const CategoryProducts = () => {
         </button>
       </div>
 
-      {/* Top Promo Banners */}
       <div className="grid grid-cols-1 md:grid-cols-2 mb-8">
-        {/* Banner 1 */}
         <div className="relative rounded-lg overflow-hidden">
           <img
             src={banner1}
@@ -104,7 +101,6 @@ const CategoryProducts = () => {
             </button>
           </div>
         </div>
-        {/* Banner 2 */}
         <div className="relative rounded-lg overflow-hidden">
           <img
             src={banner2}
@@ -128,34 +124,28 @@ const CategoryProducts = () => {
         </div>
       </div>
 
-      {/* Product Grid */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-y">
           {products.map((product) => (
             <div key={product.id} className="p-4 relative">
-              {/* Discount Badge */}
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                 {product.discount}
               </span>
 
-              {/* Heart Icon */}
               <button className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition">
                 <Heart className="w-5 h-5" />
               </button>
 
-              {/* Product Image */}
               <img
                 src={product.image}
                 alt={product.title}
                 className="w-full h-32 object-contain mb-4"
               />
 
-              {/* Title */}
               <h4 className="text-sm font-semibold mb-1 line-clamp-2">
                 {product.title}
               </h4>
 
-              {/* Rating */}
               <div className="flex items-center mb-2">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star
@@ -169,7 +159,6 @@ const CategoryProducts = () => {
                 ))}
               </div>
 
-              {/* Price */}
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-red-600 font-bold">${product.price}</span>
                 <span className="text-gray-400 line-through text-sm">
@@ -177,7 +166,6 @@ const CategoryProducts = () => {
                 </span>
               </div>
 
-              {/* Stock with Cart Icon */}
               <div className="flex items-center gap-1 text-green-600 text-xs font-semibold">
                 <ShoppingCart className="w-4 h-4" />
                 <span>IN STOCK</span>
@@ -187,7 +175,6 @@ const CategoryProducts = () => {
         </div>
       </div>
 
-      {/* Bottom Banner */}
       <div className="mt-10 relative rounded-lg overflow-hidden">
         <img
           src={bottomBanner}

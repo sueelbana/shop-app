@@ -31,16 +31,11 @@ const categories = [
 const FruitsAndVegetables = () => {
   return (
     <section>
-      {/* Hero Section */}
       <div
         className="relative bg-cover bg-light bg-center w-full"
         style={{ backgroundImage: `url(${heroProduct})` }}
       >
-        {/* Optional overlay to improve text readability */}
-        {/* <div className="absolute inset-0 bg-black/30"></div> */}
-
         <div className="relative w-full max-w-[1400px] mx-auto px-10 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-10 text-white">
-          {/* Left Text */}
           <div>
             <span className="text-green-700 font-semibold">
               Weekend Discount
@@ -70,7 +65,6 @@ const FruitsAndVegetables = () => {
         </div>
       </div>
 
-      {/* Category Section */}
       <div className="bg-white py-12">
         <div className="w-full max-w-[1400px] mx-auto px-10">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 text-center">
@@ -95,7 +89,6 @@ const FruitsAndVegetables = () => {
         </div>
       </div>
 
-      {/* Editor's Pick Section */}
       <EditorsPick />
       <CategoryProducts />
       <TopDeals />

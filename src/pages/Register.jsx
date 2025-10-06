@@ -5,7 +5,6 @@ export default function Register() {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center py-16 px-4">
       <div className="max-w-md w-full">
-        {/* Header with Login & Register Tabs */}
         <div className="text-center mb-8">
           <div className="flex justify-center space-x-6">
             <Link
@@ -24,9 +23,7 @@ export default function Register() {
           </p>
         </div>
 
-        {/* Registration Form */}
         <form className="space-y-5">
-          {/* Username */}
           <div>
             <label className="block text-gray-700 text-sm mb-1">
               Username *
@@ -38,7 +35,6 @@ export default function Register() {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-gray-700 text-sm mb-1">
               Email address *
@@ -50,7 +46,6 @@ export default function Register() {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-gray-700 text-sm mb-1">
               Password *
@@ -62,7 +57,6 @@ export default function Register() {
             />
           </div>
 
-          {/* Customer/Vendor Radio Buttons */}
           <div className="flex items-center space-x-6 text-sm text-gray-700 mt-3">
             <label className="flex items-center space-x-2">
               <input type="radio" name="role" defaultChecked />
@@ -74,7 +68,6 @@ export default function Register() {
             </label>
           </div>
 
-          {/* Privacy Note */}
           <p className="text-xs text-gray-500 mt-3 leading-relaxed">
             Your personal data will be used to support your experience
             throughout this website, to manage access to your account, and for
@@ -85,7 +78,6 @@ export default function Register() {
             .
           </p>
 
-          {/* Register Button */}
           <button
             type="submit"
             className="w-full bg-brand-purple text-white font-medium py-2 rounded-md mt-4"

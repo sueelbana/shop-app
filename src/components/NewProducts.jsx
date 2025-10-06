@@ -67,7 +67,6 @@ export default function NewProducts() {
   return (
     <section className="bg-white py-10">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold">
             NEW PRODUCTS{" "}
@@ -80,25 +79,21 @@ export default function NewProducts() {
           </button>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {products.map((product) => (
             <div
               key={product.id}
               className="relative border rounded-lg p-4 bg-white hover:shadow-lg transition flex flex-col"
             >
-              {/* Product Image */}
               <div className="relative">
                 <img
                   src={product.img}
                   alt={product.name}
                   className="h-32 mx-auto object-contain"
                 />
-                {/* Discount Badge */}
                 <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                   -{product.discount}%
                 </div>
-                {/* Add Button (below image, right side) */}
                 <div className="flex justify-end mt-2">
                   <button className="bg-purple-600 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-purple-700 transition">
                     +
@@ -106,12 +101,10 @@ export default function NewProducts() {
                 </div>
               </div>
 
-              {/* Product Name */}
               <h3 className="mt-3 text-sm font-medium line-clamp-2">
                 {product.name}
               </h3>
 
-              {/* Labels */}
               {product.label && (
                 <span
                   className={`mt-2 inline-block text-xs font-semibold px-2 py-1 rounded ${
@@ -124,7 +117,6 @@ export default function NewProducts() {
                 </span>
               )}
 
-              {/* Price Section */}
               <div className="mt-3">
                 <span className="text-red-600 font-bold text-lg">
                   ${product.price}
@@ -134,7 +126,6 @@ export default function NewProducts() {
                 </span>
               </div>
 
-              {/* Stock Indicator */}
               {product.stock && (
                 <div className="mt-3">
                   <p className="text-xs text-gray-500 mb-1">

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 👈 import navigate hook
+import { useNavigate } from "react-router-dom"; 
 import shopBanner from "../assets/shop-banner.jpg"; 
 import TopCategories from "../components/TopCategories";
 import NewProducts from "../components/NewProducts";
@@ -12,22 +12,18 @@ import DealsOfTheDay from "../components/DealsOfTheDay";
 import FeatureHighlights from "../components/FeatureHighlights";
 
 export default function Shop() {
-  const navigate = useNavigate(); // 👈 setup navigation
+  const navigate = useNavigate(); 
 
   return (
     <div className="w-full min-h-screen bg-white">
-      {/* Hero Banner Section */}
       <div className="relative w-full h-[500px] flex items-center justify-center bg-gray-100">
-        {/* Background */}
         <img
           src={shopBanner}
           alt="Shop Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Overlay Content */}
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 flex items-center justify-between">
-          {/* Left Side - Text */}
           <div className="max-w-xl text-left">
             <span className="inline-block bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded">
               Weekend Discount
@@ -43,7 +39,6 @@ export default function Shop() {
             </p>
 
             <div className="mt-6 flex items-center space-x-6">
-              {/* 👇 Navigate to Shop Listing Page */}
               <button
                 onClick={() => navigate("/shop-listing")}
                 className="bg-brand-purple hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded-md"
@@ -59,7 +54,6 @@ export default function Shop() {
         </div>
       </div>
 
-      {/* Other Sections */}
       <TopCategories />
       <NewProducts />
       <NewDeals />

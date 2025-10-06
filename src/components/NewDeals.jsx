@@ -1,7 +1,7 @@
 import React from "react";
-import banner1 from "../assets/strawberry.jpg"; 
+import banner1 from "../assets/strawberry.jpg";
 import banner2 from "../assets/orange2.jpg";
-import banner3 from "../assets/toast.jpg"; 
+import banner3 from "../assets/toast.jpg";
 
 const weeklyDeals = [
   {
@@ -52,7 +52,6 @@ const NewDeals = () => {
             backgroundPosition: "center",
           }}
         >
-          {/* Text Content */}
           <div className="relative z-10 text-left px-6">
             <p className="text-orange-400 text-xs font-semibold mb-2">
               {deal.label}

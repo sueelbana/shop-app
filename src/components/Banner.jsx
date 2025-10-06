@@ -7,7 +7,6 @@ export default function Banner() {
       className="w-full h-72 md:h-96 rounded-lg shadow-md bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${groceryImage})` }}
     >
-      {/* Overlay (optional, to make text more readable) */}
       <div className="w-full h-full rounded-lg flex items-center">
         <div className="p-8 md:p-12 max-w-xl text-black">
           <p className="text-sm text-orange-400 font-semibold mb-2">

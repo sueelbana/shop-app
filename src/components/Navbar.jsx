@@ -7,7 +7,6 @@ import logo from "../assets/logo.jpg";
 export default function Navbar() {
   return (
     <header className="w-full">
-      {/* Top Info Bar */}
       <div className="bg-brand-purple text-white text-sm flex justify-center px-6 py-2">
         <div className="flex space-x-24 text-center">
           <span>
@@ -23,10 +22,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Secondary Info Bar (below.JPG design) */}
       <div className="w-full border-b border-gray-200 text-sm">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-          {/* Left Links */}
           <div className="flex items-center space-x-6 text-gray-600">
             <a href="#" className="hover:text-brand-purple">
               About Us
@@ -38,7 +35,6 @@ export default function Navbar() {
               Wishlist
             </a>
 
-            {/* Divider + Delivery Text */}
             <span className="pl-6 ml-6 border-l border-gray-300 text-gray-500">
               We deliver to you every day from{" "}
               <span className="text-orange-500 font-semibold">
@@ -47,19 +43,15 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Right Options */}
           <div className="flex items-center space-x-6 text-gray-600">
-            {/* Language Dropdown */}
             <div className="flex items-center space-x-1 cursor-pointer hover:text-brand-purple">
               <span>English</span>
               <span>▾</span>
             </div>
-            {/* Currency Dropdown */}
             <div className="flex items-center space-x-1 cursor-pointer hover:text-brand-purple">
               <span>USD</span>
               <span>▾</span>
             </div>
-            {/* Order Tracking */}
             <a href="#" className="hover:text-brand-purple">
               Order Tracking
             </a>
@@ -67,14 +59,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Middle Bar */}
       <div className="flex items-center justify-between px-6 py-4 bg-white">
-        {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={logo} alt="ShopStore logo" className="h-18 w-48" />
         </div>
 
-        {/* Deliver To */}
         <div className="flex items-center space-x-2 text-gray-700">
           <MapPin size={20} className="text-brand-purple" />
           <span>
@@ -82,7 +71,6 @@ export default function Navbar() {
           </span>
         </div>
 
-        {/* Search */}
         <div className="flex w-1/2 border rounded-lg overflow-hidden">
           <input
             type="text"
@@ -94,7 +82,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Icons */}
         <div className="flex items-center space-x-6 text-gray-600">
           <Link
             to="/login"
@@ -119,10 +106,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Bottom Nav Links */}
       <nav className="px-6 py-3 border-t border-gray-200">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Left Links */}
           <ul className="flex space-x-8 text-gray-700 font-medium">
             <li>
               <Link
@@ -176,7 +161,6 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Right Links */}
           <ul className="flex space-x-8 text-gray-700 font-medium">
             <li>
               <Link

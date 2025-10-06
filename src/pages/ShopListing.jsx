@@ -172,17 +172,13 @@ export default function ShopListing() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-6">
-      {/* Sidebar */}
       <aside className="md:col-span-1">
         <FilterSidebar />
       </aside>
 
-      {/* Main Content */}
       <main className="md:col-span-3 space-y-6">
-        {/* ✅ Banner Above Products */}
         <Banner />
 
-        {/* ✅ Product container */}
         <div className="border rounded-md grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {products.map((p) => (
             <Link
@@ -190,22 +186,18 @@ export default function ShopListing() {
               key={p.id}
               className="relative p-4 flex flex-col items-start border-b border-r last:border-r-0 hover:shadow-md transition"
             >
-              {/* 🏷️ Discount Badge */}
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
                 -{p.discount}%
               </span>
 
-              {/* 🖼️ Product Image */}
               <img
                 src={p.img}
                 alt={p.name}
                 className="h-24 w-24 object-contain mb-2 mx-auto"
               />
 
-              {/* 📦 Product Name */}
               <h4 className="text-sm font-medium text-left w-full">{p.name}</h4>
 
-              {/* ⭐ Rating Stars */}
               <div className="flex items-center gap-0.5 mt-1 mb-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
@@ -220,7 +212,6 @@ export default function ShopListing() {
                 ))}
               </div>
 
-              {/* 💲 Price */}
               <div className="mt-1 w-full text-left">
                 <span className="text-red-600 font-bold">${p.price}</span>
                 <span className="line-through text-black ml-2 text-sm">
@@ -228,7 +219,6 @@ export default function ShopListing() {
                 </span>
               </div>
 
-              {/* 🛒 Cart Icon + In Stock */}
               <div className="mt-2 flex items-center gap-2">
                 <div className="bg-green-600 p-2 rounded-md flex items-center justify-center">
                   <FaShoppingCart className="text-white text-sm" />

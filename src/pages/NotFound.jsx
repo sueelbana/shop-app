@@ -7,7 +7,6 @@ export default function NotFound() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 px-6">
-      {/* Illustration Section */}
       <div className="flex flex-col items-center">
         <img
           src={notFoundImg}
@@ -15,17 +14,14 @@ export default function NotFound() {
           className="w-80 md:w-[500px] mb-6"
         />
 
-        {/* Subheading */}
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mt-6">
           Page not found
         </h2>
 
-        {/* Description */}
         <p className="text-gray-600 dark:text-gray-400 mt-2 text-center max-w-md">
           The page you want to go to is not currently available
         </p>
 
-        {/* Buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <button
             onClick={() => navigate("/")}

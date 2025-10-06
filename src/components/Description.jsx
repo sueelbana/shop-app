@@ -5,7 +5,6 @@ const Description = () => {
 
   return (
     <div className="w-full mt-10">
-      {/* Tabs Header */}
       <div className="flex space-x-8 border-b border-gray-300 w-full">
         <button
           className={`py-3 text-base font-medium ${
@@ -29,7 +28,6 @@ const Description = () => {
         </button>
       </div>
 
-      {/* Tab Content */}
       <div className="mt-6 w-full text-gray-700 text-sm leading-relaxed">
         {activeTab === "description" && (
           <div className="space-y-4 w-full">

@@ -41,13 +41,12 @@ const featuredProduct = {
     "Venenatis ultricies dictum sed dignissim semper. Nulla nunc tristique risus class aptent taciti sociosqu ad litora torquent himenaeos dis parturient.",
   image: pizza,
   tag: "Cool Sale",
-  totalStock: 50, // <-- Added this so progress bar can calculate
+  totalStock: 50, 
 };
 
 const DealsOfTheDay = () => {
   return (
     <div className="mt-12">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold">
           Deals Of The Day{" "}
@@ -60,33 +59,27 @@ const DealsOfTheDay = () => {
         </button>
       </div>
 
-      {/* Grid Layout with Left + Right */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Left 2 Products in One Box */}
         <div className="col-span-1 border rounded-md bg-white divide-y">
           {leftProducts.map((product) => (
             <div
               key={product.id}
               className="flex items-center p-4 relative hover:shadow-sm transition"
             >
-              {/* Discount Badge */}
               <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">
                 {product.discount}
               </span>
 
-              {/* Image */}
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-32 h-32 object-contain mr-4 flex-shrink-0"
               />
 
-              {/* Info */}
               <div className="flex-1">
                 <h3 className="text-sm font-medium text-gray-800 line-clamp-2">
                   {product.name}
                 </h3>
-                {/* Rating */}
                 <div className="flex items-center mb-2">
                   {Array.from({ length: 5 }, (_, i) => (
                     <FaStar
@@ -99,7 +92,6 @@ const DealsOfTheDay = () => {
                   ))}
                 </div>
 
-                {/* Price */}
                 <div className="flex items-center gap-2 text-sm mb-1">
                   <span className="text-red-600 font-bold">
                     ${product.price}
@@ -109,7 +101,6 @@ const DealsOfTheDay = () => {
                   </span>
                 </div>
 
-                {/* Add to cart button */}
                 <button className="text-xs bg-white border border-purple-500 text-purple-500 rounded-lg px-2 py-1 hover:bg-gray-200">
                   Add to cart +
                 </button>
@@ -118,30 +109,23 @@ const DealsOfTheDay = () => {
           ))}
         </div>
 
-        {/* Featured Product (takes 2 columns) */}
         <div className="col-span-2 border border-red-500 rounded-lg p-6 bg-white relative hover:shadow-md transition">
-          {/* Discount Badge */}
           <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">
             {featuredProduct.discount}
           </span>
 
-          {/* Wishlist Icon */}
           <button className="absolute top-2 right-2 text-gray-400 hover:text-red-500">
             <Heart size={18} />
           </button>
 
-          {/* Content Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Image */}
             <img
               src={featuredProduct.image}
               alt={featuredProduct.name}
               className="h-56 w-full object-contain"
             />
 
-            {/* Info */}
             <div>
-              {/* Rating */}
               <div className="flex items-center mb-2">
                 {Array.from({ length: 5 }, (_, i) => (
                   <FaStar
@@ -157,12 +141,10 @@ const DealsOfTheDay = () => {
                 </span>
               </div>
 
-              {/* Name */}
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 {featuredProduct.name}
               </h3>
 
-              {/* Price */}
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-red-600 font-bold text-xl">
                   ${featuredProduct.price}
@@ -172,12 +154,10 @@ const DealsOfTheDay = () => {
                 </span>
               </div>
 
-              {/* Description */}
               <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                 {featuredProduct.description}
               </p>
 
-              {/* Stock Info */}
               <p className="text-sm text-gray-500 mb-1">
                 This product is about to run out
               </p>
@@ -186,7 +166,6 @@ const DealsOfTheDay = () => {
                 <span className="font-semibold">{featuredProduct.stock}</span>
               </p>
 
-              {/* Progress Bar */}
               <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                 <div
                   className="bg-orange-500 h-2 rounded-full"
@@ -200,7 +179,6 @@ const DealsOfTheDay = () => {
                 ></div>
               </div>
 
-              {/* Add to cart button */}
               <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">
                 Add to cart
               </button>

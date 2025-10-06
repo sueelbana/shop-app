@@ -6,7 +6,7 @@ import BlogPostList from "../components/BlogPostList";
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 2; // Example: change based on your posts
+  const totalPages = 2;
 
   const posts = [
     {
@@ -42,7 +42,6 @@ const Blog = () => {
   return (
     <div className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-8">
-        {/* Main Blog Content */}
         <div className="w-full md:w-2/3 space-y-10">
           {posts.map((post) => (
             <div key={post.id} className="overflow-hidden">
@@ -56,14 +55,11 @@ const Blog = () => {
                 {post.title}
               </h1>
 
-              {/* Publication Info */}
               <p className="text-sm text-gray-500 mt-2">
                 November 3, 2023 - Klbtheme, store, themeforest
               </p>
 
-              <p className="text-gray-700 mt-4">
-                {post.description}
-              </p>
+              <p className="text-gray-700 mt-4">{post.description}</p>
 
               <button className="mt-5 px-5 py-2 bg-brand-purple text-white rounded-md hover:bg-purple-700 transition">
                 Read More
@@ -71,7 +67,6 @@ const Blog = () => {
             </div>
           ))}
 
-          {/* Pagination Section */}
           <div className="flex justify-center items-center gap-2 mt-10">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
@@ -103,7 +98,6 @@ const Blog = () => {
           </div>
         </div>
 
-        {/* Sidebar Section */}
         <div className="w-full md:w-1/3 mt-10 md:mt-0">
           <BlogPostList />
         </div>

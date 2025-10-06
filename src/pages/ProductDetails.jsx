@@ -6,24 +6,21 @@ import {
   FaShareAlt,
   FaBalanceScale,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // ✅ Import navigation
+import { useNavigate } from "react-router-dom"; 
 
-// Product images
 import bananaMain from "../assets/bananas.jpg";
 import bananaThumb1 from "../assets/bananas.jpg";
 import bananaThumb2 from "../assets/banana1.jpg";
 import bananaThumb3 from "../assets/banana2.jpg";
 
-// Components
 import Description from "../components/Description";
 import NewCategoryProducts from "../components/NewCategoryProducts";
 
 const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const [timeLeft, setTimeLeft] = useState(3600);
-  const navigate = useNavigate(); // ✅ initialize navigation
+  const navigate = useNavigate(); 
 
-  // Countdown timer
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
@@ -40,7 +37,6 @@ const ProductDetails = () => {
 
   const { h, m, s } = formatTime(timeLeft);
 
-  // ✅ Redirect handler for "Buy Now"
   const handleBuyNow = () => {
     navigate("/checkout");
   };
@@ -48,7 +44,6 @@ const ProductDetails = () => {
   return (
     <>
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* LEFT - Product Image + Thumbnails */}
         <div>
           <div className="p-4 flex justify-center items-center">
             <img src={bananaMain} alt="Banana" className="h-64 object-contain" />
@@ -66,7 +61,6 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* RIGHT - Product Info */}
         <div>
           <h1 className="text-2xl font-bold mb-2">
             Marketside Fresh Organic Bananas, Bunch
@@ -131,7 +125,6 @@ const ProductDetails = () => {
               Add to cart
             </button>
 
-            {/* ✅ Buy Now redirects to Checkout */}
             <button
               onClick={handleBuyNow}
               className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800"
@@ -169,7 +162,6 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Description + Related Products */}
         <div className="col-span-2 mt-8">
           <Description />
         </div>

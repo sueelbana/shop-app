@@ -72,17 +72,14 @@ const products = [
 
 const ProductCard = ({ product, className = "" }) => (
   <div className={`p-4 relative ${className}`}>
-    {/* Heart */}
     <button className="absolute top-3 right-3 text-gray-400 hover:text-red-500 transition">
       <Heart size={18} />
     </button>
 
-    {/* Discount */}
     <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
       {product.discount}
     </span>
 
-    {/* Image */}
     <div className="flex items-center justify-center h-32 mb-2">
       <img
         src={product.img}
@@ -91,7 +88,6 @@ const ProductCard = ({ product, className = "" }) => (
       />
     </div>
 
-    {/* Organic Badge */}
     {product.organic && (
       <div className="mb-2">
         <span className="bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -100,7 +96,6 @@ const ProductCard = ({ product, className = "" }) => (
       </div>
     )}
 
-    {/* Rating Stars */}
     {product.rating && (
       <div className="flex items-center gap-1 mb-2">
         {Array.from({ length: 5 }).map((_, i) => (
@@ -117,19 +112,16 @@ const ProductCard = ({ product, className = "" }) => (
       </div>
     )}
 
-    {/* Name */}
     <h3 className="text-sm font-medium text-gray-800 line-clamp-2 min-h-[40px]">
       {product.name}
     </h3>
 
-    {/* Description */}
     {product.description && (
       <p className="text-xs text-gray-500 mt-1 line-clamp-2">
         {product.description}
       </p>
     )}
 
-    {/* Price */}
     <div className="mt-2 flex items-center space-x-2">
       <span className="text-red-600 font-bold">${product.price}</span>
       <span className="text-gray-400 text-sm line-through">
@@ -137,13 +129,11 @@ const ProductCard = ({ product, className = "" }) => (
       </span>
     </div>
 
-    {/* Add to Cart */}
     <button className="mt-4 w-full border border-gray-300 rounded-full py-1.5 px-3 flex items-center justify-center gap-2 text-sm hover:bg-purple-600 hover:text-white transition">
       <span>Add to cart</span>
       <Plus size={16} />
     </button>
 
-    {/* Stock Indicator (below cart) */}
     {product.stock && (
       <div className="mt-3">
         <p className="text-xs text-gray-500 mb-1">
@@ -167,7 +157,6 @@ const ProductCard = ({ product, className = "" }) => (
 const EditorsPick = () => {
   return (
     <div className="px-6">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-3">
           <h2 className="text-xl font-semibold text-black">Editor’s Pick</h2>
@@ -181,26 +170,21 @@ const EditorsPick = () => {
         </button>
       </div>
 
-      {/* White container with borders */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 divide-x">
-          {/* Column 1: Apple */}
           <div>
             <ProductCard product={products[0]} />
           </div>
 
-          {/* Column 2: Pizza → Orange */}
           <div>
             <ProductCard product={products[1]} className="border-b" />
             <ProductCard product={products[2]} />
           </div>
 
-          {/* Column 3: Melon */}
           <div>
             <ProductCard product={products[3]} />
           </div>
 
-          {/* Column 4: Simply Orange → Toilet */}
           <div>
             <ProductCard product={products[4]} className="border-b" />
             <ProductCard product={products[5]} />

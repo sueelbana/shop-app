@@ -47,7 +47,6 @@ const newsPosts = [
 const NewsSection = () => {
   return (
     <section className="mt-12">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold">
           Our News{" "}
@@ -60,14 +59,12 @@ const NewsSection = () => {
         </button>
       </div>
 
-      {/* News Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {newsPosts.map((post) => (
           <div
             key={post.id}
             className="hover:shadow-md transition overflow-hidden"
           >
-            {/* Image */}
             <div className="relative">
               <img
                 src={post.image}
@@ -79,7 +76,6 @@ const NewsSection = () => {
               </span>
             </div>
 
-            {/* Content */}
             <div className="p-4">
               <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-2">
                 {post.title}

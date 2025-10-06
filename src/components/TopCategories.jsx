@@ -10,7 +10,6 @@ import dairyImg from "../assets/dairy.jpg";
 import frozenImg from "../assets/frozen.jpg";
 import groceryImg from "../assets/grocery.jpg";
 
-// ✅ Import banner image from assets
 import bottomBanner from "../assets/banner.jpg";
 
 export default function TopCategories() {
@@ -29,7 +28,6 @@ export default function TopCategories() {
   return (
     <section className="bg-white py-12">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-3">
             <h2 className="text-xl font-semibold">Top Categories</h2>
@@ -42,7 +40,6 @@ export default function TopCategories() {
           </button>
         </div>
 
-        {/* Category Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 text-center">
           {categories.map((cat, i) => (
             <div

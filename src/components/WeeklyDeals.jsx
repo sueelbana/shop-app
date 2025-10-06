@@ -42,14 +42,12 @@ const WeeklyDeals = () => {
           key={index}
           className="relative rounded-xl overflow-hidden shadow-sm"
         >
-          {/* Background Image */}
           <img
             src={deal.image}
             alt={deal.title}
             className="w-full h-56 object-cover"
           />
 
-          {/* Overlay Text */}
           <div className="absolute inset-0  p-6 flex flex-col justify-center">
             <p className="text-orange-500 font-semibold text-sm mb-2">
               Only This Week

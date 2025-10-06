@@ -5,7 +5,6 @@ export default function Login() {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center justify-center px-6">
       <div className="max-w-md w-full">
-        {/* Header with Login & Register Tabs */}
         <div className="text-center mb-8">
           <div className="flex justify-center space-x-6">
             <h1 className="text-2xl font-semibold text-gray-900 border-b-2 border-purple-600 pb-1">
@@ -23,7 +22,6 @@ export default function Login() {
           </p>
         </div>
 
-        {/* Form */}
         <form className="space-y-5">
           <div>
             <label className="block text-gray-700 text-sm mb-1">

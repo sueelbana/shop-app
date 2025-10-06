@@ -39,7 +39,6 @@ const BlogPostList = () => {
 
   return (
     <aside className="w-full md:w-80 p-4 space-y-6">
-      {/* Blog Post List */}
       <div>
         <h2 className="text-lg font-semibold mb-4">Blog Post List</h2>
         <div className="space-y-4">
@@ -63,7 +62,6 @@ const BlogPostList = () => {
 
       <hr className="my-4 border-gray-200" />
 
-      {/* Social Media Widget */}
       <div>
         <h2 className="text-lg font-semibold mb-4">Social Media Widget</h2>
         <div className="flex flex-col gap-3">

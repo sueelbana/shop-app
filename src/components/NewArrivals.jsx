@@ -1,14 +1,12 @@
 import React from "react";
 import { ShoppingCart } from "lucide-react";
 
-// Product images
 import appleJuice from "../assets/apple.jpg";
 import orangeJuice from "../assets/orange.jpg";
 import pizza2 from "../assets/pizza2.jpg";
 import melon from "../assets/melon.jpg";
 import toiletPaper from "../assets/toilet.jpg";
 
-// Banner images
 import alpro from "../assets/alpro.jpg";
 import meat from "../assets/meat.jpg";
 import oatmilk from "../assets/oatmilk.jpg";
@@ -93,7 +91,6 @@ const banners = [
 export default function NewArrivals() {
   return (
     <section className="px-6 py-10">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-xl font-semibold">New Arrivals</h2>
@@ -107,31 +104,26 @@ export default function NewArrivals() {
         </button>
       </div>
 
-      {/* Product List */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
         {products.map((product) => (
           <div
             key={product.id}
             className="border rounded-lg p-4 hover:shadow-md transition"
           >
-            {/* Discount Badge */}
             <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
               {product.discount}
             </span>
 
-            {/* Image */}
             <img
               src={product.img}
               alt={product.title}
               className="w-full h-28 object-contain my-3"
             />
 
-            {/* Title */}
             <h3 className="text-sm font-medium text-gray-700 line-clamp-2">
               {product.title}
             </h3>
 
-            {/* Prices */}
             <div className="flex items-center space-x-2 my-2">
               <span className="text-red-600 font-bold">{product.price}</span>
               <span className="line-through text-gray-400 text-sm">
@@ -139,7 +131,6 @@ export default function NewArrivals() {
               </span>
             </div>
 
-            {/* Add to Cart */}
             <button className="w-full border border-gray-300 rounded-full py-1 flex items-center justify-center space-x-2 text-sm hover:bg-purple-700 hover:text-white transition">
               <ShoppingCart size={16} />
               <span>Add to cart</span>
@@ -148,7 +139,6 @@ export default function NewArrivals() {
         ))}
       </div>
 
-      {/* Banners */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {banners.map((banner) => (
           <div
@@ -160,7 +150,6 @@ export default function NewArrivals() {
               backgroundPosition: "center",
             }}
           >
-            {/* Content */}
             <div className="relative z-10 max-w-[70%]">
               <p className="text-orange-400 text-xs font-semibold">
                 Only This Week

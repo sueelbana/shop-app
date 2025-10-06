@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, Heart, Plus } from "lucide-react";
 
-// Import images from assets
 import creamImg from "../assets/cream.jpg";
 import melonImg from "../assets/melon.jpg";
 import banner1Img from "../assets/banner1.jpg";
@@ -107,7 +106,6 @@ export default function BestSellers() {
 
   return (
     <section className="px-6 py-10 bg-white">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-3">
           <h2 className="text-xl font-semibold">Best Sellers</h2>
@@ -122,19 +120,16 @@ export default function BestSellers() {
         </button>
       </div>
 
-      {/* Products Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {products.map((product) => (
           <div
             key={product.id}
             className="border rounded-2xl p-4 shadow-sm hover:shadow-md transition bg-white relative"
           >
-            {/* Discount */}
             <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
               -{product.discount}
             </span>
 
-            {/* Favorite */}
             <button
               onClick={() => toggleFavorite(product.id)}
               className="absolute top-3 right-3"
@@ -148,14 +143,12 @@ export default function BestSellers() {
               />
             </button>
 
-            {/* Image */}
             <img
               src={product.img}
               alt={product.name}
               className="w-full h-32 object-contain mb-4"
             />
 
-            {/* Info */}
             <h3 className="text-sm font-medium text-gray-700 mb-1">
               {product.name}
             </h3>
@@ -168,11 +161,10 @@ export default function BestSellers() {
               </span>
             </div>
 
-            {/* Add to cart */}
-              <button className="border border-gray-300 rounded-full py-1 px-3 flex items-center justify-between text-sm hover:bg-purple-700 hover:text-white transition w-full">
-                <span>Add to cart</span>
-                <Plus size={16} />
-              </button>
+            <button className="border border-gray-300 rounded-full py-1 px-3 flex items-center justify-between text-sm hover:bg-purple-700 hover:text-white transition w-full">
+              <span>Add to cart</span>
+              <Plus size={16} />
+            </button>
           </div>
         ))}
       </div>

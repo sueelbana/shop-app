@@ -3,7 +3,6 @@ import React from "react";
 export default function FilterSidebar() {
   return (
     <aside className="w-72 bg-white p-4 ">
-      {/* Price Filter */}
       <div className="mb-6 border-b pb-6">
         <h3 className="text-lg font-semibold mb-3">Widget price filter</h3>
         <div className="flex items-center space-x-2 mb-2">
@@ -20,7 +19,6 @@ export default function FilterSidebar() {
           />
         </div>
 
-        {/* Custom styled range slider */}
         <input
           type="range"
           min="0"
@@ -37,7 +35,6 @@ export default function FilterSidebar() {
         </div>
       </div>
 
-      {/* Categories */}
       <div className="mb-6 border-b pb-6">
         <h3 className="text-lg font-semibold mb-3">Product Categories</h3>
         <ul className="space-y-2 text-sm">
@@ -66,14 +63,12 @@ export default function FilterSidebar() {
                 />
                 <span>{category}</span>
               </div>
-              {/* + symbol on the right */}
               <span className="text-gray-500 font-bold">+</span>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Filter by Color */}
       <div className="mb-6 border-b pb-6">
         <h3 className="text-lg font-semibold mb-3">Filter by Color</h3>
         <label className="flex items-center text-sm">
@@ -82,7 +77,6 @@ export default function FilterSidebar() {
         </label>
       </div>
 
-      {/* Filter by Brands */}
       <div className="mb-6 border-b pb-6">
         <h3 className="text-lg font-semibold mb-3">Filter by Brands</h3>
         <label className="flex items-center text-sm">
@@ -91,7 +85,6 @@ export default function FilterSidebar() {
         </label>
       </div>
 
-      {/* Product Status */}
       <div>
         <h3 className="text-lg font-semibold mb-3">Product Status</h3>
         <div className="space-y-2 text-sm">

@@ -52,7 +52,6 @@ const Deals = () => {
             backgroundPosition: "center",
           }}
         >
-          {/* Text Content */}
           <div className="relative z-10 text-left px-6">
             <p className="text-orange-400 text-xs font-semibold mb-2">
               {deal.label}

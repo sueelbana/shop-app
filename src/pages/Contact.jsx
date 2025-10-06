@@ -11,7 +11,6 @@ import FeatureHighlights from "../components/FeatureHighlights";
 export default function Contact() {
   return (
     <div className="bg-white min-h-screen px-6 py-12">
-      {/* Header Section */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <p className="text-black font-semibold text-sm uppercase tracking-wide">
           Contact With Us
@@ -25,9 +24,7 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* Main Section */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 border-t border-gray-200 pt-12">
-        {/* Left Side: Office Info */}
         <div className="space-y-8 text-left">
           <h2 className="text-lg font-semibold text-gray-900">Our Offices</h2>
           <p className="text-gray-600 text-sm leading-relaxed">
@@ -36,10 +33,8 @@ export default function Contact() {
             bi belad. Eris skonde. Tung les-vid att ridigt. Disige fried daris.
           </p>
 
-          {/* Offices Side by Side with Bottom Border */}
           <div className="border-b border-gray-200 pb-8">
             <div className="grid md:grid-cols-2 gap-8">
-              {/* US Office */}
               <div className="flex items-start space-x-4 p-4">
                 <MapPin className="text-black mt-1" />
                 <div>
@@ -60,7 +55,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Munich Office */}
               <div className="flex items-start space-x-4 p-4">
                 <MapPin className="text-black mt-1" />
                 <div>
@@ -83,7 +77,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* ✅ Follow Us Section */}
           <div className="flex items-center gap-4 pt-6">
             <span className="text-gray-800 font-medium">Follow us:</span>
             <div className="flex items-center gap-3">
@@ -115,9 +108,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Side: Contact Form */}
         <div>
-          {/* Extra Text Above Form */}
           <div className="mb-6">
             <p className="text-gray-600 text-sm mt-1">
               On dekande mydurtad mora även om skurkstat. Semirade timaheten
@@ -162,7 +153,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* ✅ Added Gap Before FeatureHighlights */}
       <div className="mt-24">
         <FeatureHighlights />
       </div>
