@@ -12,13 +12,13 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Vendor from "./pages/Vendor";
+import Vendor from "./pages/VendorAccount";
 import NotFound from "./pages/NotFound";
 
-// ✅ Import category pages
 import FruitsAndVegetables from "./pages/FruitsAndVegetables";
 import Shop from "./pages/Shop";
 import ShopListing from "./pages/ShopListing";
+import VendorAccount from "./pages/VendorAccount";
 
 function App() {
   return (
@@ -28,39 +28,28 @@ function App() {
 
         <main className="flex-grow p-6">
           <Routes>
-            {/* Home routes */}
             <Route path="/" element={<Home1 />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop-listing" element={<ShopListing />} />
 
-            {/* Product routes */}
             <Route path="/filter" element={<ProductFilter />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
 
-            {/* Blog & Contact */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
 
-            {/* Auth */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
-            {/* Vendor */}
-            <Route path="/vendor" element={<Vendor />} />
+            <Route path="/vendor-account" element={<VendorAccount />} />
 
-            {/* ✅ Categories */}
             <Route
               path="/fruits-vegetables"
               element={<FruitsAndVegetables />}
             />
-            {/* Example placeholders for future categories */}
-            {/* <Route path="/meats-seafood" element={<MeatsAndSeafood />} /> */}
-            {/* <Route path="/breakfast-dairy" element={<BreakfastAndDairy />} /> */}
-            {/* ... more categories */}
 
-            {/* Fallback */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
