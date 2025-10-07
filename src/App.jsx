@@ -12,7 +12,6 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Vendor from "./pages/VendorAccount";
 import NotFound from "./pages/NotFound";
 
 import FruitsAndVegetables from "./pages/FruitsAndVegetables";
